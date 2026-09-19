@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET | VIP Transportation & Chauffeur Services</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <meta name="description" content="Chauffeur services, airport transfers, event shuttles, and custom luxury tours in stretch limousines & party buses.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+        <span>VELVET</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-dropdown" id="homeDropdown">
+          <a href="index.html" class="nav-link dropdown-trigger">Home <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Fleet Hero</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Lounge Edition</a>
+          </div>
+        </div>
+
+        <a href="fleet.html" class="nav-link">Fleet</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link mobile-login-link"><i class="fas fa-user-circle"></i> Login</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.75rem; font-weight:700;">LTR</span></button>
+        <a href="login.html" class="btn btn-primary desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <button class="icon-btn hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- STANDARD CONSTANT HERO (260px HEIGHT) -->
+  <section class="inner-hero">
+    <img src="assets/images/hero/hero-services.jpg" alt="VIP Services" class="inner-hero-bg">
+    <div class="inner-hero-content">
+      <h1 class="inner-hero-title">VIP Chauffeur Services</h1>
+      <p class="inner-hero-desc">White-glove private transport for airport transfers, event shuttles, and luxury tours.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES PAGE - EXACTLY 7 SECTIONS -->
+
+  <!-- SECTION 1: SERVICES CATALOG GRID -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-concierge-bell"></i> Service Portfolio</span>
+        <h2 class="section-title">Private Chauffeur Solutions</h2>
+        <p class="section-subtitle">Dedicated luxury transportation tailored to personal, corporate, and celebratory itineraries.</p>
+      </div>
+
+      <div class="grid-4-col">
+        <!-- Service 1 -->
+        <div class="modern-card">
+          <div class="modern-card-img">
+            <img src="assets/images/services/chauffeur.jpg" alt="Private Chauffeur">
+            <span class="card-pill-badge">Hourly Charter</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Private Chauffeur Service</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Formally attired driver at your disposal for unlimited stops.</p>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Book Service</a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="modern-card">
+          <div class="modern-card-img">
+            <img src="assets/images/services/airport-transfer.jpg" alt="Airport VIP Transfer">
+            <span class="card-pill-badge">Flight Tracked</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Airport VIP Express</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Meet-and-greet tarmac service with luggage assistance.</p>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Book Service</a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="modern-card">
+          <div class="modern-card-img">
+            <img src="assets/images/services/event-shuttle.jpg" alt="Event Convoy Shuttle">
+            <span class="card-pill-badge">Group Transit</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Event Convoy Shuttles</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Multi-vehicle Sprinter fleets for weddings and conventions.</p>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Book Service</a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="modern-card">
+          <div class="modern-card-img">
+            <img src="assets/images/services/custom-tour.jpg" alt="Nightlife & City Tour">
+            <span class="card-pill-badge">Nightlife Tour</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Custom City & Bar Tours</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Curated nightclub drop-offs with party bus bar setup.</p>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Book Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SERVICE COMPARISON FEATURES -->
+  <section style="padding: 70px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-check-double"></i> Standards</span>
+        <h2 class="section-title">Our Service Guarantee</h2>
+        <p class="section-subtitle">What sets Velvet transport apart from standard taxis or ride-shares.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <!-- Guarantee Card 1 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/services/guarantee/guarantee-ontime.png" alt="Guaranteed On-Time Pickups" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; flex-grow: 1;">
+            <h4 style="margin-bottom: 6px; font-size: 1.05rem;">Guaranteed On-Time Pickups</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Chauffeurs arrive 15 minutes prior to scheduled pickup time.</p>
+          </div>
+        </div>
+
+        <!-- Guarantee Card 2 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/services/guarantee/guarantee-wifi.png" alt="5G Onboard Wi-Fi & Media" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; flex-grow: 1;">
+            <h4 style="margin-bottom: 6px; font-size: 1.05rem;">5G Onboard Wi-Fi & Media</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Stream playlists or conduct mobile business while traveling.</p>
+          </div>
+        </div>
+
+        <!-- Guarantee Card 3 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/services/guarantee/guarantee-vetted.png" alt="Vetted & Insured Drivers" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; flex-grow: 1;">
+            <h4 style="margin-bottom: 6px; font-size: 1.05rem;">Vetted & Insured Drivers</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Background checks, drug screenings, and full commercial liability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: EDITORIAL SPLIT SHOWCASE -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="grid-2-col" style="align-items: center;">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+          <img src="assets/images/services/airport-transfer.jpg" alt="Airport VIP Tarmac Transfer" style="height: 360px; width: 100%; object-fit: cover;">
+        </div>
+        <div>
+          <span class="section-tag"><i class="fas fa-plane-arrival"></i> Executive Airport Shuttle</span>
+          <h2 class="section-title" style="text-align: left;">Direct Terminal & FBO Pickup</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            Avoid airport parking hassles. Our dispatchers monitor live flight radar so your chauffeur is standing by the moment you land.
+          </p>
+          <a href="dashboard.html" class="btn btn-primary"><i class="fas fa-plane"></i> Book Airport Transfer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: STATS BANNER -->
+  <section style="padding: 70px 0; background: var(--dark-wine); color: #FFF; text-align: center;">
+    <div class="container">
+      <div class="grid-4-col">
+        <div>
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--red-accent);">100%</div>
+          <div style="color: #D0C2C2; font-size: 0.88rem;">Flight Delay Protection</div>
+        </div>
+        <div>
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--red-accent);">24/7</div>
+          <div style="color: #D0C2C2; font-size: 0.88rem;">Live Dispatch Desk</div>
+        </div>
+        <div>
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--red-accent);">$5M</div>
+          <div style="color: #D0C2C2; font-size: 0.88rem;">Commercial Liability</div>
+        </div>
+        <div>
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--red-accent);">4.98★</div>
+          <div style="color: #D0C2C2; font-size: 0.88rem;">Driver Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: SERVICE STEPS -->
+  <section style="padding: 80px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-calendar-alt"></i> Booking Guide</span>
+        <h2 class="section-title">How to Schedule a Chauffeur</h2>
+        <p class="section-subtitle">Book online in 3 simple steps.</p>
+      </div>
+
+      <div class="grid-3-col" style="text-align: center;">
+        <div style="padding: 24px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">1</div>
+          <h4>Enter Pickup Address</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Set location, airport terminal, or event venue.</p>
+        </div>
+        <div style="padding: 24px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">2</div>
+          <h4>Choose Car & Hours</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Select Escalade SUV, Sprinter Jet Van, or Stretch Limo.</p>
+        </div>
+        <div style="padding: 24px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">3</div>
+          <h4>Receive Live Driver Track</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Track your chauffeur's arrival in real time on mobile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: VIP SERVICE PROTOCOLS (ACCORDION DRAWER LAYOUT) -->
+  <section style="padding: 70px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-user-shield"></i> Chauffeur Standard</span>
+        <h2 class="section-title">Velvet VIP Service Protocols</h2>
+        <p class="section-subtitle">The strict 4-point operational standards followed by every Velvet master chauffeur.</p>
+      </div>
+
+      <div class="protocol-accordion">
+        <div class="protocol-item open">
+          <div class="protocol-header">
+            <span><i class="fas fa-user-tie text-accent" style="margin-right: 10px;"></i> Protocol 1: Professional Dress & Absolute Discretion Code</span>
+            <i class="fas fa-chevron-down text-accent"></i>
+          </div>
+          <div class="protocol-body">
+            Every chauffeur is strictly uniformed in formal dark suits, ties, and gloves. All drivers sign non-disclosure agreements (NDAs) ensuring complete privacy for high-profile executive and celebrity guests.
+          </div>
+        </div>
+
+        <div class="protocol-item">
+          <div class="protocol-header">
+            <span><i class="fas fa-plane-arrival text-accent" style="margin-right: 10px;"></i> Protocol 2: Flight Monitoring & Zero-Delay Meet & Greet</span>
+            <i class="fas fa-chevron-down text-accent"></i>
+          </div>
+          <div class="protocol-body">
+            Our dispatch desk automatically syncs with live commercial and private flight radar. If your flight is delayed 2 hours, your chauffeur adjusts arrival seamlessly with luggage assistance inside arrivals.
+          </div>
+        </div>
+
+        <div class="protocol-item">
+          <div class="protocol-header">
+            <span><i class="fas fa-cocktail text-accent" style="margin-right: 10px;"></i> Protocol 3: Cabin Temperature & Refreshment Tailoring</span>
+            <i class="fas fa-chevron-down text-accent"></i>
+          </div>
+          <div class="protocol-body">
+            Prior to pickup, the cabin climate control is set to your preferred temperature. Stocked bar coolers, sparkling water, champagne flutes, and device chargers are pre-configured to your itinerary.
+          </div>
+        </div>
+
+        <div class="protocol-item">
+          <div class="protocol-header">
+            <span><i class="fas fa-shield-alt text-accent" style="margin-right: 10px;"></i> Protocol 4: Late-Night Doorstep Security Escort</span>
+            <i class="fas fa-chevron-down text-accent"></i>
+          </div>
+          <div class="protocol-body">
+            For evening drop-offs, bachelorettes, and prom groups, our chauffeurs remain parked with headlights illuminating your entrance until every guest is safely inside their residence.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 7: CALL TO ACTION FLOATING CARD BANNER -->
+  <section class="cta-card-section">
+    <div class="container">
+      <div class="cta-card-box">
+        <div class="cta-card-icon"><i class="fas fa-user-tie"></i></div>
+        <div class="cta-card-badge">24/7 Chauffeur Guarantee</div>
+        <h2 class="cta-card-title">Book Premier Chauffeur Service Today</h2>
+        <p class="cta-card-subtitle">
+          Experience background-checked master drivers, flight tracking, and zero hidden surcharges for your corporate or private event.
+        </p>
+        <div class="cta-actions-group">
+          <a href="dashboard.html" class="btn btn-primary" style="padding: 14px 32px;"><i class="fas fa-calendar-alt"></i> Book Chauffeur Online</a>
+          <a href="contact.html" class="btn btn-outline" style="padding: 14px 32px;"><i class="fas fa-phone-alt"></i> 24/7 Concierge Hotline</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #FFF; margin-bottom: 12px; display: inline-flex;">
+            <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+            <span>VELVET</span>
+          </a>
+          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2;">VIP chauffeur & transportation service.</p>
+        </div>
+        <div><h4>Navigation</h4><div class="footer-links"><a href="index.html">Home</a><a href="fleet.html">Fleet</a><a href="packages.html">Packages</a><a href="services.html">Services</a></div></div>
+        <div><h4>Information</h4><div class="footer-links"><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Contact</a></div></div>
+        <div><h4>Account</h4><div class="footer-links"><a href="login.html">Login</a><a href="dashboard.html">My Booking</a></div></div>
+        <div><h4>Newsletter</h4>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');" style="display: flex; gap: 6px;">
+            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 8px 12px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 8px 14px;"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom"><div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

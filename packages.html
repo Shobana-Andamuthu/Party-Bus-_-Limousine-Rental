@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET | All-Inclusive Party Bus & Limo Packages (Prom, Bachelorette, Corporate)</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <meta name="description" content="Special event limousine and party bus packages for proms, bachelorette bashes, weddings, and executive corporate galas.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- FIXED NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+        <span>VELVET</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-dropdown" id="homeDropdown">
+          <a href="index.html" class="nav-link dropdown-trigger">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Fleet Hero</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Lounge Edition</a>
+          </div>
+        </div>
+
+        <a href="fleet.html" class="nav-link">Fleet</a>
+        <a href="packages.html" class="nav-link active">Packages</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link mobile-login-link"><i class="fas fa-user-circle"></i> Login</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.75rem; font-weight:700;">LTR</span></button>
+        <a href="login.html" class="btn btn-primary desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <button class="icon-btn hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- STANDARD INNER HERO (EXACTLY 260px HEIGHT) -->
+  <section class="inner-hero">
+    <img src="assets/images/hero/hero-packages.jpg" alt="Occasion Packages" class="inner-hero-bg">
+    <div class="inner-hero-content">
+      <h1 class="inner-hero-title">Occasion Packages</h1>
+      <p class="inner-hero-desc">Curated celebrations designed for Proms, Bachelorette parties, Weddings & Corporate galas.</p>
+    </div>
+  </section>
+
+  <!-- PACKAGES PAGE - EXACTLY 7 SECTIONS -->
+
+  <!-- SECTION 1: MAIN OCCASION CARDS -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-glass-cheers"></i> Celebrations</span>
+        <h2 class="section-title">Special Occasion Collections</h2>
+        <p class="section-subtitle">Tailored packages complete with red carpet drop-offs, ice bars, and custom pickup itineraries.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <!-- Card 1 -->
+        <div class="overlay-card">
+          <img src="assets/images/packages/bachelorette.jpg" alt="Bachelorette Glam Party">
+          <span class="card-pill-badge">Top Rated</span>
+          <div class="overlay-card-scrim">
+            <div class="overlay-card-body">
+              <h3 class="overlay-card-title">Bachelorette Glam Bash</h3>
+              <p class="overlay-card-desc">Complimentary champagne, photo stops, nightclub VIP transfer & party bus lounge.</p>
+            </div>
+            <div class="overlay-card-action">
+              <a href="dashboard.html" class="btn btn-primary">Reserve Package</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="overlay-card">
+          <img src="assets/images/packages/prom-night.jpg" alt="Prom Night Royale">
+          <span class="card-pill-badge">Safety Guarantee</span>
+          <div class="overlay-card-scrim">
+            <div class="overlay-card-body">
+              <h3 class="overlay-card-title">Prom Night Royale</h3>
+              <p class="overlay-card-desc">Parent peace of mind, zero-alcohol guarantee, multi-home pickup & red carpet backdrop.</p>
+            </div>
+            <div class="overlay-card-action">
+              <a href="dashboard.html" class="btn btn-primary">Reserve Package</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="overlay-card">
+          <img src="assets/images/packages/wedding-luxe.jpg" alt="Wedding Luxe Convoy">
+          <span class="card-pill-badge">Elegance</span>
+          <div class="overlay-card-scrim">
+            <div class="overlay-card-body">
+              <h3 class="overlay-card-title">Wedding Luxe Convoy</h3>
+              <p class="overlay-card-desc">Bridal party stretch limousine, champagne toast & decorated exterior ribbons.</p>
+            </div>
+            <div class="overlay-card-action">
+              <a href="dashboard.html" class="btn btn-primary">Reserve Package</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="overlay-card">
+          <img src="assets/images/packages/corporate-gala.jpg" alt="Corporate VIP Gala">
+          <span class="card-pill-badge">Executive</span>
+          <div class="overlay-card-scrim">
+            <div class="overlay-card-body">
+              <h3 class="overlay-card-title">Corporate VIP Gala</h3>
+              <p class="overlay-card-desc">Seamless executive shuttle transport, onboard Wi-Fi & luggage concierge.</p>
+            </div>
+            <div class="overlay-card-action">
+              <a href="dashboard.html" class="btn btn-primary">Reserve Package</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="overlay-card">
+          <img src="assets/images/packages/birthday-blitz.jpg" alt="Birthday Blitz Tour">
+          <span class="card-pill-badge">Nightlife</span>
+          <div class="overlay-card-scrim">
+            <div class="overlay-card-body">
+              <h3 class="overlay-card-title">Birthday Party Blitz</h3>
+              <p class="overlay-card-desc">City skyline tour, nightclub entrance, custom party lighting & Bluetooth music.</p>
+            </div>
+            <div class="overlay-card-action">
+              <a href="dashboard.html" class="btn btn-primary">Reserve Package</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="overlay-card">
+          <img src="assets/images/packages/night-out.jpg" alt="VIP Night Out">
+          <span class="card-pill-badge">Custom Route</span>
+          <div class="overlay-card-scrim">
+            <div class="overlay-card-body">
+              <h3 class="overlay-card-title">VIP Concert & Night Out</h3>
+              <p class="overlay-card-desc">Multi-stop bar hop, stadium drop-off & dedicated waiting chauffeur.</p>
+            </div>
+            <div class="overlay-card-action">
+              <a href="dashboard.html" class="btn btn-primary">Reserve Package</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INCLUDED PACKAGE AMENITIES -->
+  <section style="padding: 70px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-gift"></i> What's Included</span>
+        <h2 class="section-title">Standard Package Perks</h2>
+        <p class="section-subtitle">Every package comes equipped with white-glove VIP amenities.</p>
+      </div>
+
+      <div class="grid-4-col">
+        <!-- Perk Card 1 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 150px; overflow: hidden; position: relative;">
+            <img src="assets/images/packages/perks/perk-ice-bar.jpg" alt="Complimentary Ice Bar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 16px; flex-grow: 1; text-align: center;">
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">Complimentary Ice Bar</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Artisan ice, spring waters, sodas, and crystal glass stemware.</p>
+          </div>
+        </div>
+
+        <!-- Perk Card 2 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 150px; overflow: hidden; position: relative;">
+            <img src="assets/images/packages/perks/perk-multi-stop.png" alt="Multi-Stop Routes" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 16px; flex-grow: 1; text-align: center;">
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">Multi-Stop Routes</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Unlimited photo stops and group pick-up locations.</p>
+          </div>
+        </div>
+
+        <!-- Perk Card 3 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 150px; overflow: hidden; position: relative;">
+            <img src="assets/images/packages/perks/perk-red-carpet.jpg" alt="Red Carpet Rollout" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 16px; flex-grow: 1; text-align: center;">
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">Red Carpet Rollout</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">VIP red carpet photo opportunity at your primary destination.</p>
+          </div>
+        </div>
+
+        <!-- Perk Card 4 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 150px; overflow: hidden; position: relative;">
+            <img src="assets/images/packages/perks/perk-driver.jpg" alt="Uniformed Driver" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 16px; flex-grow: 1; text-align: center;">
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">Uniformed Driver</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Background-checked professional chauffeur in full suit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PACKAGE CUSTOMIZER PREVIEW -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="grid-2-col" style="align-items: center;">
+        <div>
+          <span class="section-tag"><i class="fas fa-sliders-h"></i> Customization</span>
+          <h2 class="section-title" style="text-align: left;">Build Your Own Party Package</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            Need a specific itinerary or mix of vehicles? Work directly with our concierge team to assemble custom routes, split vehicle convoys, or specialized decorations.
+          </p>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Speak to Concierge</a>
+        </div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+          <img src="assets/images/packages/concierge-packages.jpg" alt="Concierge Planning Team" style="height: 340px; width: 100%; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PROM PARENT SAFETY GUARANTEE -->
+  <section style="padding: 70px 0; background: var(--dark-wine); color: #FFF;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag" style="background: rgba(198, 40, 50, 0.25); color: #FFA3A8;"><i class="fas fa-user-shield"></i> Parent Peace of Mind</span>
+      <h2 style="font-size: 2.2rem; color: #FFF; margin: 12px 0 14px 0;">Prom Safety Guarantee</h2>
+      <p style="max-width: 620px; margin: 0 auto; color: #D0C2C2; font-size: 1rem;">
+        Strict zero-alcohol policy for underage guests, direct SMS contact with parents, and GPS location verification throughout the night.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: PACKAGE PRICING SUMMARY -->
+  <section style="padding: 80px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-tag"></i> Tier Rates</span>
+        <h2 class="section-title">Package Starting Rates</h2>
+        <p class="section-subtitle">Transparent pricing based on 4-hour standard rental blocks.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <div style="padding: 28px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3>Prom Royale</h3>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--burgundy-primary); margin: 10px 0;">$850 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">/ 5-hr block</span></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Up to 10 Prom Guests ($85/person)</p>
+          <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Book Package</a>
+        </div>
+
+        <div style="padding: 28px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 2px solid var(--burgundy-primary); position: relative;">
+          <span style="position: absolute; top: -12px; right: 20px; background: var(--burgundy-primary); color: #FFF; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: var(--radius-full);">POPULAR</span>
+          <h3>Bachelorette Bash</h3>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--burgundy-primary); margin: 10px 0;">$1,160 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">/ 4-hr block</span></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Up to 24 Guests on Party Bus ($48/person)</p>
+          <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Book Package</a>
+        </div>
+
+        <div style="padding: 28px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3>Wedding Convoy</h3>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--burgundy-primary); margin: 10px 0;">$1,400 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">/ 6-hr block</span></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Bridal Limo + Guest Shuttle Van</p>
+          <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Book Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: INCLUDED PACKAGE AMENITIES (HORIZONTAL RIBBON LAYOUT) -->
+  <section style="padding: 70px 0; background: var(--dark-wine); color: #FFFFFF;">
+    <div class="container">
+      <div class="section-header" style="color: #FFFFFF;">
+        <span class="section-tag" style="background: rgba(198, 40, 50, 0.25); color: #FFA3A8;"><i class="fas fa-gift"></i> VIP Inclusions</span>
+        <h2 class="section-title" style="color: #FFFFFF;">Every Velvet Package Includes</h2>
+        <p class="section-subtitle" style="color: #D0C2C2;">Standard luxury perks configured into all hourly event & party bus packages.</p>
+      </div>
+
+      <div class="vip-inclusions-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 980px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+        <div class="vip-inclusion-card" style="padding: 16px 20px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: #FFFFFF; text-align: center; width: 100%; box-sizing: border-box;">
+          <i class="fas fa-glass-martini-alt" style="color: var(--red-accent);"></i> Chilled Champagne & Crystal Flutes Bar
+        </div>
+        <div class="vip-inclusion-card" style="padding: 16px 20px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: #FFFFFF; text-align: center; width: 100%; box-sizing: border-box;">
+          <i class="fas fa-music" style="color: var(--red-accent);"></i> 2,000W Bluetooth Surround Sound & Neon Lights
+        </div>
+        <div class="vip-inclusion-card" style="padding: 16px 20px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: #FFFFFF; text-align: center; width: 100%; box-sizing: border-box;">
+          <i class="fas fa-map-marked-alt" style="color: var(--red-accent);"></i> Unlimited Multi-Stop Pickup & Drop-Off Route
+        </div>
+        <div class="vip-inclusion-card" style="padding: 16px 20px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: #FFFFFF; text-align: center; width: 100%; box-sizing: border-box;">
+          <i class="fas fa-camera" style="color: var(--red-accent);"></i> Red Carpet Entrance Rollout Photo Op
+        </div>
+        <div class="vip-inclusion-card" style="padding: 16px 20px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: #FFFFFF; text-align: center; width: 100%; box-sizing: border-box;">
+          <i class="fas fa-wifi" style="color: var(--red-accent);"></i> Complimentary High-Speed 5G Wi-Fi
+        </div>
+        <div class="vip-inclusion-card" style="padding: 16px 20px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: #FFFFFF; text-align: center; width: 100%; box-sizing: border-box;">
+          <i class="fas fa-snowflake" style="color: var(--red-accent);"></i> Climate Control & HEPA Cabin Air Filtration
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 7: CALL TO ACTION FLOATING CARD BANNER -->
+  <section class="cta-card-section">
+    <div class="container">
+      <div class="cta-card-box">
+        <div class="cta-card-icon"><i class="fas fa-glass-cheers"></i></div>
+        <div class="cta-card-badge">Custom Event Planning</div>
+        <h2 class="cta-card-title">Tailor Your Custom Celebration Package</h2>
+        <p class="cta-card-subtitle">
+          Add custom pickup stops, floral ribbons, ice bar stocking, or red carpet photo backdrops to any package.
+        </p>
+        <div class="cta-actions-group">
+          <a href="dashboard.html" class="btn btn-primary" style="padding: 14px 32px;"><i class="fas fa-plus-circle"></i> Build Custom Package</a>
+          <a href="contact.html" class="btn btn-outline" style="padding: 14px 32px;"><i class="fas fa-envelope"></i> Request Custom Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #FFF; margin-bottom: 12px; display: inline-flex;">
+            <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+            <span>VELVET</span>
+          </a>
+          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2;">Premier party bus and limousine packages.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <div class="footer-links"><a href="index.html">Home</a><a href="fleet.html">Fleet</a><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <div class="footer-links"><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <div class="footer-links"><a href="login.html">Login</a><a href="dashboard.html">My Booking</a></div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');" style="display: flex; gap: 6px;">
+            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 8px 12px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 8px 14px;"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom"><div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

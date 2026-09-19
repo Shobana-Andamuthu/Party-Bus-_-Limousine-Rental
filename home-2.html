@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET | Lounge & Party Bus Edition - Home 2</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <meta name="description" content="VIP Party Bus & Stretch Limousine Experience. Explore lounge seating, built-in bars, 3000W DJ sound systems, and nightclub transfer packages.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    .hero-home-2 {
+      position: relative;
+      height: 82vh;
+      min-height: 540px;
+      margin-top: var(--navbar-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFFFFF !important;
+      overflow: hidden;
+      background: var(--dark-wine);
+    }
+
+    .hero-2-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.35) contrast(1.1);
+    }
+
+    .hero-2-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 24px;
+    }
+
+    .hero-home-2 .hero-title,
+    [data-theme="light"] .hero-home-2 .hero-title,
+    [data-theme="dark"] .hero-home-2 .hero-title {
+      color: #FFFFFF !important;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 4px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-home-2 .hero-desc,
+    [data-theme="light"] .hero-home-2 .hero-desc,
+    [data-theme="dark"] .hero-home-2 .hero-desc {
+      color: #F0E6E6 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: repeat(2, 240px);
+      gap: 20px;
+    }
+
+    .bento-item {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bento-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .bento-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .bento-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(22,5,7,0.95) 100%);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #FFFFFF !important;
+    }
+
+    .bento-overlay h3, .bento-overlay h4 {
+      color: #FFFFFF !important;
+    }
+
+    @media (max-width: 1024px) {
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .bento-item { height: 260px; }
+    }
+
+    @media (max-width: 640px) {
+      .bento-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FIXED NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+        <span>VELVET</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-dropdown" id="homeDropdown">
+          <a href="index.html" class="nav-link dropdown-trigger active">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Fleet Hero</a>
+            <a href="home-2.html" class="dropdown-item active">Home 2 - Lounge Edition</a>
+          </div>
+        </div>
+
+        <a href="fleet.html" class="nav-link">Fleet</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link mobile-login-link"><i class="fas fa-user-circle"></i> Login</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.75rem; font-weight:700;">LTR</span></button>
+        <a href="login.html" class="btn btn-primary desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <button class="icon-btn hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME 2 - EXACTLY 8 MEANINGFUL SECTIONS -->
+
+  <!-- SECTION 1: FULLSCREEN LOUNGE HERO -->
+  <section class="hero-home-2">
+    <img src="assets/images/hero/hero-home-2-vip.jpg" alt="Party Bus Lounge Interior" class="hero-2-bg">
+    <div class="hero-2-content">
+      <span class="section-tag" style="background: rgba(198, 40, 50, 0.25); color: #FFA3A8;"><i class="fas fa-glass-cheers"></i> The Nightlife & Lounge Experience</span>
+      <h1 class="hero-title">Party Bus & VIP Limousine Lounges</h1>
+      <p class="hero-desc">Step inside rolling nightclub lounges equipped with laser lights, DJ sound systems, bar setups, and private leather seating.</p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="fleet.html" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;"><i class="fas fa-bolt"></i> Reserve Party Lounge</a>
+        <a href="packages.html" class="btn btn-outline-darkbg" style="padding: 14px 32px; font-size: 1rem;"><i class="fas fa-crown"></i> Prom & Bachelorette Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BENTO GRID FLEET CATEGORIES -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-th-large"></i> Layout Categories</span>
+        <h2 class="section-title">Visual Fleet Gallery</h2>
+        <p class="section-subtitle">Categorized by vehicle capacity and interior lounge ambiance.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-item" style="grid-row: span 2;">
+          <img src="assets/images/home2/bento-mega-bus.jpg" alt="Mega Party Bus Lounge">
+          <div class="bento-overlay">
+            <span style="font-size: 0.75rem; color: #FFA3A8; font-weight: 700; text-transform: uppercase;">28-30 Passengers</span>
+            <h3 style="font-size: 1.6rem; margin: 4px 0 8px 0; color: #FFF !important;">Mega Party Lounge Bus</h3>
+            <p style="font-size: 0.88rem; color: #E5E7EB !important; margin-bottom: 12px;">Full standing height, dual bars, laser ceiling & DJ bluetooth sound.</p>
+            <div><a href="fleet.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;">Explore Specs</a></div>
+          </div>
+        </div>
+
+        <div class="bento-item">
+          <img src="assets/images/home2/bento-white-limo.jpg" alt="White Stretch Limo">
+          <div class="bento-overlay">
+            <span style="font-size: 0.75rem; color: #FFA3A8; font-weight: 700;">10 Pass</span>
+            <h4 style="font-size: 1.2rem; color: #FFF !important;">White Stretch Limo</h4>
+          </div>
+        </div>
+
+        <div class="bento-item">
+          <img src="assets/images/home2/bento-sprinter-jet.jpg" alt="Mercedes Sprinter Jet">
+          <div class="bento-overlay">
+            <span style="font-size: 0.75rem; color: #FFA3A8; font-weight: 700;">14 Pass</span>
+            <h4 style="font-size: 1.2rem; color: #FFF !important;">Executive Sprinter</h4>
+          </div>
+        </div>
+
+        <div class="bento-item">
+          <img src="assets/images/home2/bento-cadillac-suv.jpg" alt="Cadillac Escalade ESV">
+          <div class="bento-overlay">
+            <span style="font-size: 0.75rem; color: #FFA3A8; font-weight: 700;">6 Pass</span>
+            <h4 style="font-size: 1.2rem; color: #FFF !important;">Cadillac SUV</h4>
+          </div>
+        </div>
+
+        <div class="bento-item">
+          <img src="assets/images/home2/bento-bachelorette-lounge.jpg" alt="Bachelorette Group">
+          <div class="bento-overlay">
+            <span style="font-size: 0.75rem; color: #FFA3A8; font-weight: 700;">Event VIP</span>
+            <h4 style="font-size: 1.2rem; color: #FFF !important;">Bachelorette Lounge</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: HORIZONTAL FEATURE HIGHLIGHTS -->
+  <section style="padding: 80px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-sliders-h"></i> Custom Amenities</span>
+        <h2 class="section-title">Onboard Luxury Standards</h2>
+        <p class="section-subtitle">Every rental is packed with modern entertainment features.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <!-- Amenity 1 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="assets/images/amenities/dj-sound-system.jpg" alt="3000W DJ Sound Systems" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 24px; flex-grow: 1;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">3000W DJ Sound Systems</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Seamless Bluetooth pairing with custom equalizer presets and subwoofers.</p>
+          </div>
+        </div>
+
+        <!-- Amenity 2 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="assets/images/amenities/ice-bar-glassware.jpg" alt="Built-in Ice Bars & Glassware" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 24px; flex-grow: 1;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Built-in Ice Bars & Glassware</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Stainless steel ice tubs, crystal champagne flutes, and rock glasses provided.</p>
+          </div>
+        </div>
+
+        <!-- Amenity 3 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 190px; overflow: hidden; position: relative;">
+            <img src="assets/images/amenities/laser-fiber-ceiling.jpg" alt="Laser & Fiber Optic Ceilings" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 24px; flex-grow: 1;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Laser & Fiber Optic Ceilings</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Customizable RGB mood lighting, strobe pulses, and starfield light panels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: STEP-BY-STEP RESERVATION PROCESS -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-list-ol"></i> Simple Steps</span>
+        <h2 class="section-title">How Booking Works</h2>
+        <p class="section-subtitle">Reserve your luxury vehicle in 4 quick online steps.</p>
+      </div>
+
+      <div class="grid-4-col">
+        <div style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; border-radius: var(--radius-lg);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px auto;">1</div>
+          <h4 style="margin-bottom: 6px;">Select Vehicle</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Choose your stretch limo or party bus based on group size.</p>
+        </div>
+
+        <div style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; border-radius: var(--radius-lg);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px auto;">2</div>
+          <h4 style="margin-bottom: 6px;">Pick Date & Stops</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Set pickup time, duration, and custom photo stop preferences.</p>
+        </div>
+
+        <div style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; border-radius: var(--radius-lg);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px auto;">3</div>
+          <h4 style="margin-bottom: 6px;">Lock Deposit</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Pay a low deposit to secure your vehicle date on our calendar.</p>
+        </div>
+
+        <div style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; border-radius: var(--radius-lg);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--burgundy-primary); color: #FFF; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px auto;">4</div>
+          <h4 style="margin-bottom: 6px;">Enjoy VIP Night</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Your chauffeur arrives on time in formal attire ready to serve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: OCCASION COMPARISON TABLE -->
+  <section style="padding: 80px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-balance-scale"></i> Comparison</span>
+        <h2 class="section-title">Fleet Specifications Comparison</h2>
+        <p class="section-subtitle">Compare seating capacity, bar features, and hourly rates.</p>
+      </div>
+
+      <div style="overflow-x: auto; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 20px;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border-color);">
+              <th style="padding: 14px;">Vehicle Model</th>
+              <th style="padding: 14px;">Capacity</th>
+              <th style="padding: 14px;">Lighting</th>
+              <th style="padding: 14px;">Bar & Ice</th>
+              <th style="padding: 14px;">Hourly Rate</th>
+              <th style="padding: 14px; text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 14px; font-weight: 700;">Lincoln Town Car Stretch Limo</td>
+              <td style="padding: 14px;">10 Passengers</td>
+              <td style="padding: 14px;">Star Ceiling RGB</td>
+              <td style="padding: 14px;"><i class="fas fa-check text-accent"></i> Included</td>
+              <td style="padding: 14px; font-weight: 800; color: var(--burgundy-primary);">$180 / hr</td>
+              <td style="padding: 14px; text-align: right;"><a href="dashboard.html" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.78rem;">Book</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 14px; font-weight: 700;">Mega Party Lounge Bus</td>
+              <td style="padding: 14px;">28 Passengers</td>
+              <td style="padding: 14px;">Laser Light Show</td>
+              <td style="padding: 14px;"><i class="fas fa-check text-accent"></i> Dual Bars</td>
+              <td style="padding: 14px; font-weight: 800; color: var(--burgundy-primary);">$290 / hr</td>
+              <td style="padding: 14px; text-align: right;"><a href="dashboard.html" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.78rem;">Book</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 14px; font-weight: 700;">Mercedes Sprinter Jet Van</td>
+              <td style="padding: 14px;">14 Passengers</td>
+              <td style="padding: 14px;">Ambient Warm LED</td>
+              <td style="padding: 14px;"><i class="fas fa-check text-accent"></i> Mini Bar</td>
+              <td style="padding: 14px; font-weight: 800; color: var(--burgundy-primary);">$220 / hr</td>
+              <td style="padding: 14px; text-align: right;"><a href="dashboard.html" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.78rem;">Book</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 14px; font-weight: 700;">Cadillac Escalade ESV SUV</td>
+              <td style="padding: 14px;">6 Passengers</td>
+              <td style="padding: 14px;">Standard Ambient</td>
+              <td style="padding: 14px;"><i class="fas fa-check text-accent"></i> Water Bar</td>
+              <td style="padding: 14px; font-weight: 800; color: var(--burgundy-primary);">$140 / hr</td>
+              <td style="padding: 14px; text-align: right;"><a href="dashboard.html" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.78rem;">Book</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: FAQ ACCORDION DROPDOWN -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-question-circle"></i> FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Quick answers before you reach out to our support team.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item open">
+          <div class="faq-header">
+            <h4>What is the minimum rental hour requirement?</h4>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </div>
+          <div class="faq-body">
+            Most weekend bookings require a 3 to 4 hour minimum rental period. Prom night packages have fixed 5-hour slots, while custom wedding convoys can be scheduled for split-time charter service.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>Are drinks and champagne allowed on the party bus?</h4>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </div>
+          <div class="faq-body">
+            Yes! For guests 21+, BYOB is permitted on party lounge buses and stretch limousines. Ice, crystal glassware, and bottle coolers are provided complimentary in all vehicles.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>How does the prom safety guarantee work?</h4>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </div>
+          <div class="faq-body">
+            All prom rentals enforce a strict zero-alcohol policy for minors, direct parent contact dispatching, and scheduled drop-off itineraries for complete parent peace of mind.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>Is my service area covered for multi-home pickups?</h4>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </div>
+          <div class="faq-body">
+            Yes! We cover the entire metropolitan and surrounding suburban areas. Custom pickup stops at multiple guest locations can be specified directly inside your reservation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: TESTIMONIAL BANNER SLIDER -->
+  <section style="padding: 80px 0; background: var(--dark-wine); color: #FFF !important; text-align: center;">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(198, 40, 50, 0.25); color: #FFA3A8;"><i class="fas fa-quote-left"></i> Verified Reviews</span>
+      <h2 style="font-size: 2.2rem; color: #FFF !important; margin: 12px 0 20px 0;">"The Best Party Bus Experience in the City"</h2>
+      <p style="max-width: 640px; margin: 0 auto 24px auto; font-style: italic; color: #D0C2C2 !important; font-size: 1.05rem;">
+        "We rented the 28-passenger party bus for my 30th birthday tour around downtown. The bluetooth sound system was loud and crisp, the bar stayed cold, and our driver Marcus was a legend!"
+      </p>
+      <div style="font-weight: 700; color: var(--red-accent) !important; font-size: 1rem;">Marcus Vance & Friends</div>
+      <div style="font-size: 0.8rem; color: #D0C2C2 !important;">Birthday Party Bus Rental</div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: BOTTOM CTA FLOATING CARD BANNER -->
+  <section class="cta-card-section">
+    <div class="container">
+      <div class="cta-card-box">
+        <div class="cta-card-icon"><i class="fas fa-crown"></i></div>
+        <div class="cta-card-badge">Instant VIP Lounge Reservation</div>
+        <h2 class="cta-card-title">Ready for the Ultimate Nightlife Ride?</h2>
+        <p class="cta-card-subtitle">
+          Reserve your Mega Party Lounge Bus or Jet Sprinter today with a low 20% deposit and lock in your weekend date.
+        </p>
+        <div class="cta-actions-group">
+          <a href="dashboard.html" class="btn btn-primary" style="padding: 14px 32px;"><i class="fas fa-check-circle"></i> Reserve Lounge Bus</a>
+          <a href="contact.html" class="btn btn-outline" style="padding: 14px 32px;"><i class="fas fa-phone"></i> Call Concierge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #FFF; margin-bottom: 12px; display: inline-flex;">
+            <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+            <span style="color: #FFF !important;">VELVET</span>
+          </a>
+          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2;">Premier party bus and limousine rental service.</p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home 1</a>
+            <a href="home-2.html">Home 2</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="packages.html">Packages</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Pages</h4>
+          <div class="footer-links">
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Account</h4>
+          <div class="footer-links">
+            <a href="login.html">Client Login</a>
+            <a href="dashboard.html">Dashboard Portal</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Newsletter</h4>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');" style="display: flex; gap: 6px;">
+            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 8px 12px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 8px 14px;"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

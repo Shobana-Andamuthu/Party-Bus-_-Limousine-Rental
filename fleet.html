@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET | Limousine & Party Bus Fleet Gallery</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <meta name="description" content="Explore our ultra-luxury fleet of stretch limousines, party buses, executive Sprinters, and Cadillac Escalade SUVs.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    .fleet-filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--burgundy-primary);
+      color: #FFFFFF;
+      border-color: var(--burgundy-primary);
+    }
+
+    .fleet-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .fleet-spec-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .fleet-spec-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FIXED NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+        <span>VELVET</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-dropdown" id="homeDropdown">
+          <a href="index.html" class="nav-link dropdown-trigger">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Fleet Hero</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Lounge Edition</a>
+          </div>
+        </div>
+
+        <a href="fleet.html" class="nav-link active">Fleet</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link mobile-login-link"><i class="fas fa-user-circle"></i> Login</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.75rem; font-weight:700;">LTR</span></button>
+        <a href="login.html" class="btn btn-primary desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <button class="icon-btn hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- STANDARD CONSISTENT INNER HERO (EXACTLY 260px HEIGHT) -->
+  <section class="inner-hero">
+    <img src="assets/images/hero/hero-fleet.jpg" alt="Velvet Fleet" class="inner-hero-bg">
+    <div class="inner-hero-content">
+      <h1 class="inner-hero-title">Our Luxury Fleet</h1>
+      <p class="inner-hero-desc">Explore stretch limousines, party buses, Sprinter vans & SUVs by vehicle type and capacity.</p>
+    </div>
+  </section>
+
+  <!-- FLEET PAGE - EXACTLY 7 MEANINGFUL SECTIONS -->
+
+  <!-- SECTION 1: FILTERABLE FLEET CATALOG GRID -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="fleet-filter-bar">
+        <button class="filter-btn active" onclick="filterFleet('all', this)">All Vehicles</button>
+        <button class="filter-btn" onclick="filterFleet('limo', this)">Stretch Limousines</button>
+        <button class="filter-btn" onclick="filterFleet('party-bus', this)">Party Buses</button>
+        <button class="filter-btn" onclick="filterFleet('sprinter', this)">Sprinter Vans</button>
+        <button class="filter-btn" onclick="filterFleet('suv', this)">Luxury SUVs</button>
+      </div>
+
+      <div class="fleet-spec-grid" id="fleetGridContainer">
+        <!-- Vehicle 1 (Limo) -->
+        <div class="modern-card fleet-item limo">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/limo-white-1.jpg" alt="Lincoln White Stretch Limo">
+            <span class="card-pill-badge">8-10 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Lincoln White Stretch Limo</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Fiber-optic star ceiling, leather lounge & champagne ice bar.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$180 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 2 (Limo) -->
+        <div class="modern-card fleet-item limo">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/limo-black-1.jpg" alt="Executive Black Stretch Limo">
+            <span class="card-pill-badge">10 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Executive Black Stretch Limo</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Blacked-out privacy windows, ambient lighting & Bluetooth sound.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$195 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 3 (Limo) -->
+        <div class="modern-card fleet-item limo">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/limo-vintage-1.jpg" alt="Vintage Royal Rolls-Royce Limo">
+            <span class="card-pill-badge">6-8 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Vintage Royal Rolls-Royce Limo</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Classic luxury styling, burr walnut trim & red carpet service.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$240 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 4 (Party Bus) -->
+        <div class="modern-card fleet-item party-bus">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/bus-party-1.jpg" alt="Mega Celebration Party Bus">
+            <span class="card-pill-badge">28 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Mega Celebration Party Bus</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Standing height lounge, laser lighting & 3000W DJ audio.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$290 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 5 (Party Bus) -->
+        <div class="modern-card fleet-item party-bus">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/bus-party-2.jpg" alt="VIP Club Cruiser Bus">
+            <span class="card-pill-badge">24 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>VIP Club Cruiser Bus</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Built-in ice bars, nightclub LED panels & dancing lounge.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$260 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 6 (Party Bus) -->
+        <div class="modern-card fleet-item party-bus">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/bus-party-3.jpg" alt="Grand Royale Party Coach">
+            <span class="card-pill-badge">32 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Grand Royale Party Coach</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Ultra-wide dancing floor, dual champagne bars & 4K video screens.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$320 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 7 (Sprinter) -->
+        <div class="modern-card fleet-item sprinter">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/sprinter-jet-1.jpg" alt="Mercedes Sprinter Jet Van">
+            <span class="card-pill-badge">14 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Mercedes Sprinter Jet Van</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Captain chairs, 5G Wi-Fi, Apple TV & privacy partition.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$220 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 8 (Sprinter) -->
+        <div class="modern-card fleet-item sprinter">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/sprinter-black-1.jpg" alt="Black Edition Sprinter VIP">
+            <span class="card-pill-badge">12 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Black Edition Sprinter VIP</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Reclining leather seats, HDMI gaming ports & work tables.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$210 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 9 (Sprinter) -->
+        <div class="modern-card fleet-item sprinter">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/sprinter-luxe-1.jpg" alt="Presidential Luxe Sprinter">
+            <span class="card-pill-badge">16 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Presidential Luxe Sprinter</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Extended chassis, extra luggage space & surround sound system.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$235 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 10 (SUV) -->
+        <div class="modern-card fleet-item suv">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/suv-escalade-1.jpg" alt="Cadillac Escalade ESV Luxe">
+            <span class="card-pill-badge">6 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Cadillac Escalade ESV Luxe</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Blacked-out VIP executive SUV with climate seating.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$140 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 11 (SUV) -->
+        <div class="modern-card fleet-item suv">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/suv-navigator-1.jpg" alt="Lincoln Navigator Black Label">
+            <span class="card-pill-badge">7 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Lincoln Navigator Black Label</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Revel Ultima audio, panoramic sunroof & heated massage seats.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$155 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 12 (SUV) -->
+        <div class="modern-card fleet-item suv">
+          <div class="modern-card-img">
+            <img src="assets/images/fleet/suv-rangerover-1.jpg" alt="Range Rover Autobiography VIP">
+            <span class="card-pill-badge">5 Pass</span>
+          </div>
+          <div class="modern-card-body">
+            <h3>Range Rover Autobiography VIP</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 4px 0 12px 0;">Air suspension, executive class rear seats & privacy glass.</p>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--burgundy-primary); margin-bottom: 12px;">$165 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">/ hr</span></div>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Reserve This Vehicle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CAPACITY COMPARISON CHART -->
+  <section style="padding: 70px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-users"></i> Capacity Guide</span>
+        <h2 class="section-title">Passenger & Luggage Guide</h2>
+        <p class="section-subtitle">Ensure maximum comfort for your party size.</p>
+      </div>
+
+      <div class="grid-4-col">
+        <!-- Guide Card 1 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/guide/guide-6-pass.jpg" alt="6-8 Guests" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; text-align: center; flex-grow: 1;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 6px;">6 - 8 Guests</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Cadillac Escalade ESV / Vintage Rolls-Royce</p>
+          </div>
+        </div>
+
+        <!-- Guide Card 2 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/guide/guide-10-pass.jpg" alt="10-12 Guests" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; text-align: center; flex-grow: 1;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 6px;">10 - 12 Guests</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Lincoln Town Car Stretch Limo</p>
+          </div>
+        </div>
+
+        <!-- Guide Card 3 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/guide/guide-14-pass.jpg" alt="14-16 Guests" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; text-align: center; flex-grow: 1;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 6px;">14 - 16 Guests</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Mercedes Sprinter Executive Van</p>
+          </div>
+        </div>
+
+        <!-- Guide Card 4 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/guide/guide-20-pass.jpg" alt="20-30 Guests" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; text-align: center; flex-grow: 1;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 6px;">20 - 30 Guests</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Mega Party Lounge Bus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: ONBOARD AMENITIES HIGHLIGHT -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="grid-2-col" style="align-items: center;">
+        <div>
+          <span class="section-tag"><i class="fas fa-cog"></i> Specs & Technology</span>
+          <h2 class="section-title" style="text-align: left;">Hyper-Luxury Interior Engineering</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            Our vehicles are built with state-of-the-art acoustic insulation, fiber-optic star systems, and heavy-duty air conditioning for ultimate comfort.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 10px;"><i class="fas fa-check-circle text-accent"></i> Dual Built-in Champagne Ice Tubs</div>
+            <div style="display: flex; align-items: center; gap: 10px;"><i class="fas fa-check-circle text-accent"></i> Custom RGB LED Mood Lighting</div>
+            <div style="display: flex; align-items: center; gap: 10px;"><i class="fas fa-check-circle text-accent"></i> Privacy Chauffeur Partition Screen</div>
+          </div>
+        </div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+          <img src="assets/images/fleet/tech-interior.jpg" alt="Hyper-Luxury Interior Engineering" style="height: 380px; width: 100%; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: SAFETY & HYGIENE CERTIFICATION -->
+  <section style="padding: 70px 0; background: var(--dark-wine); color: #FFF;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag" style="background: rgba(198, 40, 50, 0.25); color: #FFA3A8;"><i class="fas fa-shield-alt"></i> Safety Certified</span>
+      <h2 style="font-size: 2.2rem; color: #FFF; margin: 12px 0 14px 0;">Comprehensively Inspected & Sanitized</h2>
+      <p style="max-width: 600px; margin: 0 auto; color: #D0C2C2; font-size: 1rem;">
+        Every vehicle undergoes a 50-point mechanical safety inspection and professional detail sanitization prior to every trip.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CUSTOMIZATION OPTIONS -->
+  <section style="padding: 80px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-sliders-h"></i> Add-Ons</span>
+        <h2 class="section-title">Vehicle Customization Options</h2>
+        <p class="section-subtitle">Enhance your vehicle reservation with custom inclusions.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <!-- Add-on Card 1 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/addons/addon-ribbons.jpg" alt="Custom Event Ribbons" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; flex-grow: 1;">
+            <h4 style="margin-bottom: 6px; font-size: 1.05rem;">Custom Event Ribbons</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Exterior satin ribbons for wedding cars and prom arrivals.</p>
+          </div>
+        </div>
+
+        <!-- Add-on Card 2 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/addons/addon-beverage.jpg" alt="Premium Beverage Bar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; flex-grow: 1;">
+            <h4 style="margin-bottom: 6px; font-size: 1.05rem;">Premium Beverage Bar</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Pre-stocked sparkling ciders, sodas, and artisan ice cubes.</p>
+          </div>
+        </div>
+
+        <!-- Add-on Card 3 -->
+        <div class="modern-card" style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; height: 100%; display: flex; flex-direction: column;">
+          <div style="height: 160px; overflow: hidden; position: relative;">
+            <img src="assets/images/addons/addon-redcarpet.jpg" alt="Red Carpet Rollout" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          </div>
+          <div style="padding: 20px; flex-grow: 1;">
+            <h4 style="margin-bottom: 6px; font-size: 1.05rem;">Red Carpet Rollout</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Red carpet photography backdrop at your pickup location.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: FLEET ENGINEERING & SAFETY SHOWCASE (GRID-LESS SPLIT SHOWCASE) -->
+  <section style="padding: 70px 0; background: var(--bg-card);">
+    <div class="container">
+      <div class="grid-2-col" style="align-items: center;">
+        <div>
+          <span class="section-tag"><i class="fas fa-shield-alt"></i> Vehicle Rigor</span>
+          <h2 class="section-title" style="text-align: left;">100% In-House Fleet Maintenance & Sanitization</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+            Every vehicle in the Velvet fleet undergoes rigorous daily mechanical audits inside our private climate-controlled garage prior to dispatch.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle text-accent" style="font-size: 1.2rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="font-size: 0.95rem;">50-Point Pre-Trip Mechanical Inspection</strong>
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">Brakes, suspension, tire pressure, and liquid levels checked before every booking.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle text-accent" style="font-size: 1.2rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="font-size: 0.95rem;">Medical-Grade Ozone Cabin Disinfection</strong>
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">Steam-cleaned leather seats, sanitized bar flutes, and HEPA air filtration.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+              <i class="fas fa-check-circle text-accent" style="font-size: 1.2rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="font-size: 0.95rem;">Dual Satellite GPS & Live Telematics Tracking</strong>
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">Live speed monitoring and real-time route optimization by our dispatch desk.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color);">
+          <img src="assets/images/fleet/detail-inspection.jpg" alt="Fleet Safety Detail" style="width: 100%; height: 380px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 7: CALL TO ACTION FLOATING CARD BANNER -->
+  <section class="cta-card-section">
+    <div class="container">
+      <div class="cta-card-box">
+        <div class="cta-card-icon"><i class="fas fa-car-side"></i></div>
+        <div class="cta-card-badge">Custom Fleet Selection</div>
+        <h2 class="cta-card-title">Can't Decide Which Vehicle Fits Your Group?</h2>
+        <p class="cta-card-subtitle">
+          Our transport specialists are on standby 24/7 to recommend the perfect stretch limousine or party bus based on your guest count.
+        </p>
+        <div class="cta-actions-group">
+          <a href="contact.html" class="btn btn-primary" style="padding: 14px 32px;"><i class="fas fa-comments"></i> Speak with Concierge</a>
+          <a href="pricing.html" class="btn btn-outline" style="padding: 14px 32px;"><i class="fas fa-calculator"></i> Compare Hourly Rates</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #FFF; margin-bottom: 12px; display: inline-flex;">
+            <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
+            <span>VELVET</span>
+          </a>
+          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2;">Premier celebration fleet rentals.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="packages.html">Packages</a>
+            <a href="services.html">Services</a>
+          </div>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <div class="footer-links">
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <div class="footer-links">
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">My Booking</a>
+          </div>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');" style="display: flex; gap: 6px;">
+            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 8px 12px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 8px 14px;"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function filterFleet(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const items = document.querySelectorAll('.fleet-item');
+      items.forEach(item => {
+        if (cat === 'all' || item.classList.contains(cat)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
