@@ -291,6 +291,54 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
+/* VIP INCLUSIONS GRID & CARDS */
+.vip-inclusions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vip-inclusion-card {
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.vip-inclusion-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.vip-inclusion-card i {
+  color: var(--red-accent);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.vip-inclusion-card span {
+  flex: 1;
+  text-align: left;
+  line-height: 1.35;
+}
+
 /* 6. NAVBAR */
 .navbar {
   position: fixed;
