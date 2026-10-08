@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
@@ -21,6 +21,7 @@
     .dashboard-layout {
       display: flex;
       min-height: 100vh;
+      padding-top: 76px;
       background: var(--bg-primary);
     }
 
@@ -33,10 +34,24 @@
       display: flex;
       flex-direction: column;
       border-right: 1px solid rgba(255, 255, 255, 0.08);
+      position: fixed;
+      top: 76px;
+      bottom: 0;
+      left: 0;
+      height: calc(100vh - 76px);
+      overflow-y: auto;
+      z-index: 900;
+    }
+
+    [dir="rtl"] .dash-sidebar {
+      left: auto;
+      right: 0;
+      border-right: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .dash-nav {
-      margin-top: 32px;
+      margin-top: 16px;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -62,19 +77,35 @@
 
     .dash-main {
       flex: 1;
+      margin-left: 260px;
       display: flex;
       flex-direction: column;
+      min-width: 0;
       overflow-x: hidden;
     }
 
+    [dir="rtl"] .dash-main {
+      margin-left: 0;
+      margin-right: 260px;
+    }
+
     .dash-topbar {
-      height: 76px;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 32px;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      height: 76px !important;
+      z-index: 1000 !important;
+      background: var(--bg-card) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border-bottom: 1px solid var(--border-color) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 0 32px !important;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
     }
 
     .dash-content {
@@ -96,6 +127,12 @@
       border-radius: var(--radius-lg);
       padding: 20px;
       box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .metric-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
 
     .metric-label {
@@ -109,7 +146,7 @@
     .metric-value {
       font-size: 1.8rem;
       font-weight: 800;
-      color: var(--burgundy-primary);
+      color: var(--price-color);
       margin-top: 4px;
     }
 
@@ -197,7 +234,21 @@
     @media (max-width: 768px) {
       .dash-topbar {
         padding: 0 16px;
-        height: 68px;
+        height: 64px;
+      }
+      .dash-logout-text {
+        display: none !important;
+      }
+      .dash-logout-btn {
+        width: 38px !important;
+        height: 38px !important;
+        padding: 0 !important;
+        border-radius: var(--radius-full) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 0.95rem !important;
+        flex-shrink: 0 !important;
       }
       .dash-user-welcome {
         display: none;
@@ -229,11 +280,11 @@
       <span class="dash-brand-text">VELVET</span>
     </a>
 
-    <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
       <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
       <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.78rem; font-weight:800;">LTR</span></button>
       <a href="index.html" class="btn btn-outline dash-back-btn" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fas fa-arrow-left"></i> Back to Site</a>
-      <a href="login.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+      <a href="login.html" class="btn btn-primary dash-logout-btn" title="Log Out" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fas fa-sign-out-alt"></i> <span class="dash-logout-text">Log Out</span></a>
     </div>
   </header>
 

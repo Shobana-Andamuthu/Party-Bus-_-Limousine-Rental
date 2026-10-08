@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
@@ -43,15 +43,17 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="dashboard.html" class="nav-link">Dashboard</a>
         <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
         <a href="login.html" class="nav-link mobile-login-link"><i class="fas fa-user-circle"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary mobile-book-btn"><i class="fas fa-calendar-check"></i> Book Ride</a>
       </nav>
 
       <div class="nav-actions">
         <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
         <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.75rem; font-weight:700;">LTR</span></button>
-        <a href="login.html" class="btn btn-primary desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <a href="login.html" class="btn desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <a href="contact.html" class="btn desktop-book-btn"><i class="fas fa-calendar-check"></i> <span>Book Ride</span></a>
         <button class="icon-btn hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -258,36 +260,91 @@
     </div>
   </section>
 
-  <!-- SECTION 5: PACKAGE PRICING SUMMARY -->
+  <!-- SECTION 5: PACKAGE PRICING SUMMARY (REDESIGNED LUXURY TIERS) -->
   <section style="padding: 80px 0; background: var(--bg-card);">
     <div class="container">
       <div class="section-header">
         <span class="section-tag"><i class="fas fa-tag"></i> Tier Rates</span>
-        <h2 class="section-title">Package Starting Rates</h2>
-        <p class="section-subtitle">Transparent pricing based on 4-hour standard rental blocks.</p>
+        <h2 class="section-title">Curated Package Rates</h2>
+        <p class="section-subtitle">All-inclusive rates with guaranteed zero hidden surcharges and VIP amenities.</p>
       </div>
 
-      <div class="grid-3-col">
-        <div style="padding: 28px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-          <h3>Prom Royale</h3>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--burgundy-primary); margin: 10px 0;">$850 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">/ 5-hr block</span></div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Up to 10 Prom Guests ($85/person)</p>
-          <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Book Package</a>
+      <div class="package-pricing-grid">
+        <!-- Card 1: Prom Royale -->
+        <div class="pkg-rate-card">
+          <div class="pkg-card-header">
+            <div class="pkg-card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Prom Royale</h3>
+            <div class="pkg-price-row">
+              <span class="pkg-price-val">$850</span>
+              <span class="pkg-price-unit">/ 5-hr block</span>
+            </div>
+            <div class="pkg-capacity-pill">
+              <i class="fas fa-users"></i> Up to 10 Prom Guests ($85/person)
+            </div>
+          </div>
+
+          <div class="pkg-features-list">
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Lincoln Stretch Limo or Jet Sprinter</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Multi-Home Pickup & Drop-Off</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Red Carpet Photo Backdrop</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Zero-Alcohol Safety Guarantee</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Direct Chauffeur SMS Parent Contact</span></div>
+          </div>
+
+          <a href="dashboard.html" class="btn btn-outline" style="width: 100%;"><i class="fas fa-calendar-check"></i> Book Package</a>
         </div>
 
-        <div style="padding: 28px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 2px solid var(--burgundy-primary); position: relative;">
-          <span style="position: absolute; top: -12px; right: 20px; background: var(--burgundy-primary); color: #FFF; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: var(--radius-full);">POPULAR</span>
-          <h3>Bachelorette Bash</h3>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--burgundy-primary); margin: 10px 0;">$1,160 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">/ 4-hr block</span></div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Up to 24 Guests on Party Bus ($48/person)</p>
-          <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Book Package</a>
+        <!-- Card 2: Bachelorette Bash (FEATURED / POPULAR) -->
+        <div class="pkg-rate-card pkg-featured">
+          <span class="pkg-badge-popular"><i class="fas fa-crown"></i> Most Popular</span>
+          
+          <div class="pkg-card-header">
+            <div class="pkg-card-icon"><i class="fas fa-glass-cheers"></i></div>
+            <h3>Bachelorette Bash</h3>
+            <div class="pkg-price-row">
+              <span class="pkg-price-val">$1,160</span>
+              <span class="pkg-price-unit">/ 4-hr block</span>
+            </div>
+            <div class="pkg-capacity-pill">
+              <i class="fas fa-users"></i> Up to 24 Guests on Party Bus ($48/person)
+            </div>
+          </div>
+
+          <div class="pkg-features-list">
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Mega Celebration Party Lounge Bus</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Built-In Artisan Ice Bar & Sparkling Cider</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>3,000W DJ Sound System & Laser Lighting</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>VIP Nightclub Priority Drop-Off</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Custom Photo Stops & Skyline Tour</span></div>
+          </div>
+
+          <a href="dashboard.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-bolt"></i> Book Featured Package</a>
         </div>
 
-        <div style="padding: 28px; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-          <h3>Wedding Convoy</h3>
-          <div style="font-size: 2.2rem; font-weight: 800; color: var(--burgundy-primary); margin: 10px 0;">$1,400 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">/ 6-hr block</span></div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Bridal Limo + Guest Shuttle Van</p>
-          <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Book Package</a>
+        <!-- Card 3: Wedding Convoy -->
+        <div class="pkg-rate-card">
+          <div class="pkg-card-header">
+            <div class="pkg-card-icon"><i class="fas fa-heart"></i></div>
+            <h3>Wedding Convoy</h3>
+            <div class="pkg-price-row">
+              <span class="pkg-price-val">$1,400</span>
+              <span class="pkg-price-unit">/ 6-hr block</span>
+            </div>
+            <div class="pkg-capacity-pill">
+              <i class="fas fa-car-side"></i> Bridal Limo + Guest Shuttle Van
+            </div>
+          </div>
+
+          <div class="pkg-features-list">
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>White Stretch Limo for Bridal Party</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Mercedes Sprinter Guest Shuttle</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Exterior White Silk Ribbons & Decor</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Post-Ceremony Chilled Champagne Toast</span></div>
+            <div class="pkg-feature-item"><i class="fas fa-check-circle"></i> <span>Full Day Punctuality Coordinator</span></div>
+          </div>
+
+          <a href="dashboard.html" class="btn btn-outline" style="width: 100%;"><i class="fas fa-calendar-check"></i> Book Package</a>
         </div>
       </div>
     </div>
@@ -336,8 +393,10 @@
   <section class="cta-card-section">
     <div class="container">
       <div class="cta-card-box">
-        <div class="cta-card-icon"><i class="fas fa-glass-cheers"></i></div>
-        <div class="cta-card-badge">Custom Event Planning</div>
+        <div class="cta-card-badge-wrap">
+          <div class="cta-card-icon"><i class="fas fa-glass-cheers"></i></div>
+          <div class="cta-card-badge">Custom Event Planning</div>
+        </div>
         <h2 class="cta-card-title">Tailor Your Custom Celebration Package</h2>
         <p class="cta-card-subtitle">
           Add custom pickup stops, floral ribbons, ice bar stocking, or red carpet photo backdrops to any package.
@@ -357,31 +416,80 @@
         <div>
           <a href="index.html" class="brand-logo" style="color: #FFF; margin-bottom: 12px; display: inline-flex;">
             <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
-            <span>VELVET</span>
+            <span style="color: #FFF !important;">VELVET</span>
           </a>
-          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2;">Premier party bus and limousine packages.</p>
+          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2; line-height: 1.5;">Premier luxury party bus and stretch limousine rental service.</p>
+          
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>100 Velvet Blvd, Suite 400, Beverly Hills, CA 90210</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (800) 555-VELVET</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>concierge@velvetfleet.com</span>
+            </div>
+          </div>
+
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
+
         <div>
           <h4>Navigation</h4>
-          <div class="footer-links"><a href="index.html">Home</a><a href="fleet.html">Fleet</a><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="packages.html">Packages</a>
+            <a href="services.html">Services</a>
+          </div>
         </div>
+
         <div>
           <h4>Information</h4>
-          <div class="footer-links"><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Contact</a></div>
+          <div class="footer-links">
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
         </div>
+
         <div>
           <h4>Account</h4>
-          <div class="footer-links"><a href="login.html">Login</a><a href="dashboard.html">My Booking</a></div>
+          <div class="footer-links">
+            <a href="login.html">Client Login</a>
+            <a href="register.html">Register Account</a>
+            <a href="dashboard.html">My Reservations</a>
+          </div>
         </div>
+
         <div>
-          <h4>Newsletter</h4>
-          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');" style="display: flex; gap: 6px;">
-            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 8px 12px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
-            <button type="submit" class="btn btn-primary" style="padding: 8px 14px;"><i class="fas fa-paper-plane"></i></button>
+          <h4>VIP Newsletter</h4>
+          <p style="font-size: 0.82rem; color: #D0C2C2; margin-bottom: 12px;">Get exclusive discount codes & event invitations.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Newsletter!', 'success');" style="display: flex; gap: 6px;">
+            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 10px 14px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px;"><i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
-      <div class="footer-bottom"><div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div></div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;">
+          <a href="about.html" style="color: #9E8C8C;">Privacy Policy</a>
+          <a href="about.html" style="color: #9E8C8C;">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
 

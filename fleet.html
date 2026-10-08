@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
@@ -84,15 +84,17 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="dashboard.html" class="nav-link">Dashboard</a>
         <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
         <a href="login.html" class="nav-link mobile-login-link"><i class="fas fa-user-circle"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary mobile-book-btn"><i class="fas fa-calendar-check"></i> Book Ride</a>
       </nav>
 
       <div class="nav-actions">
         <button class="icon-btn" id="themeToggleBtn" title="Theme Toggle"><i class="fas fa-moon" id="themeIcon"></i></button>
         <button class="icon-btn" id="dirToggleBtn" title="Direction Toggle"><span id="dirText" style="font-size:0.75rem; font-weight:700;">LTR</span></button>
-        <a href="login.html" class="btn btn-primary desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <a href="login.html" class="btn desktop-login-btn"><i class="fas fa-user-circle"></i> <span>Login</span></a>
+        <a href="contact.html" class="btn desktop-book-btn"><i class="fas fa-calendar-check"></i> <span>Book Ride</span></a>
         <button class="icon-btn hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -476,8 +478,10 @@
   <section class="cta-card-section">
     <div class="container">
       <div class="cta-card-box">
-        <div class="cta-card-icon"><i class="fas fa-car-side"></i></div>
-        <div class="cta-card-badge">Custom Fleet Selection</div>
+        <div class="cta-card-badge-wrap">
+          <div class="cta-card-icon"><i class="fas fa-car-side"></i></div>
+          <div class="cta-card-badge">Custom Fleet Selection</div>
+        </div>
         <h2 class="cta-card-title">Can't Decide Which Vehicle Fits Your Group?</h2>
         <p class="cta-card-subtitle">
           Our transport specialists are on standby 24/7 to recommend the perfect stretch limousine or party bus based on your guest count.
@@ -497,10 +501,34 @@
         <div>
           <a href="index.html" class="brand-logo" style="color: #FFF; margin-bottom: 12px; display: inline-flex;">
             <img src="assets/images/logo.png" alt="VELVET Logo" class="brand-logo-img">
-            <span>VELVET</span>
+            <span style="color: #FFF !important;">VELVET</span>
           </a>
-          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2;">Premier celebration fleet rentals.</p>
+          <p style="font-size: 0.88rem; max-width: 280px; color: #D0C2C2; line-height: 1.5;">Premier luxury party bus and stretch limousine rental service.</p>
+          
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>100 Velvet Blvd, Suite 400, Beverly Hills, CA 90210</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (800) 555-VELVET</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>concierge@velvetfleet.com</span>
+            </div>
+          </div>
+
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
+
         <div>
           <h4>Navigation</h4>
           <div class="footer-links">
@@ -510,32 +538,42 @@
             <a href="services.html">Services</a>
           </div>
         </div>
+
         <div>
           <h4>Information</h4>
           <div class="footer-links">
             <a href="pricing.html">Pricing</a>
             <a href="about.html">About</a>
-            <a href="dashboard.html">Dashboard</a>
             <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
           </div>
         </div>
+
         <div>
           <h4>Account</h4>
           <div class="footer-links">
-            <a href="login.html">Login</a>
-            <a href="dashboard.html">My Booking</a>
+            <a href="login.html">Client Login</a>
+            <a href="register.html">Register Account</a>
+            <a href="dashboard.html">My Reservations</a>
           </div>
         </div>
+
         <div>
-          <h4>Newsletter</h4>
-          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');" style="display: flex; gap: 6px;">
-            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 8px 12px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
-            <button type="submit" class="btn btn-primary" style="padding: 8px 14px;"><i class="fas fa-paper-plane"></i></button>
+          <h4>VIP Newsletter</h4>
+          <p style="font-size: 0.82rem; color: #D0C2C2; margin-bottom: 12px;">Get exclusive discount codes & event invitations.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Newsletter!', 'success');" style="display: flex; gap: 6px;">
+            <input type="email" placeholder="Your email..." required style="background: #160507; border: 1px solid #501B20; padding: 10px 14px; border-radius: var(--radius-md); color: #FFF; font-size: 0.85rem; flex: 1;">
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px;"><i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
+
       <div class="footer-bottom">
         <div>&copy; 2026 VELVET Transport LLC. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;">
+          <a href="about.html" style="color: #9E8C8C;">Privacy Policy</a>
+          <a href="about.html" style="color: #9E8C8C;">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>

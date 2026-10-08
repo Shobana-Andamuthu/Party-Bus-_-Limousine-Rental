@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
@@ -96,12 +96,25 @@
         </button>
       </form>
 
-      <div style="text-align: center; margin-top: 24px; font-size: 0.88rem; color: var(--text-muted);">
-        Don't have an account? <a href="register.html" style="color: var(--burgundy-primary); font-weight: 700;">Create Account</a>
+      <div class="auth-divider"><span>Or continue with</span></div>
+
+      <div class="social-login-grid">
+        <button type="button" class="btn-social google-btn" onclick="showToast('Google Sign-In Connected', 'info')">
+          <i class="fab fa-google"></i>
+          <span>Continue with Google</span>
+        </button>
+        <button type="button" class="btn-social apple-btn" onclick="showToast('Apple ID Sign-In Connected', 'info')">
+          <i class="fab fa-apple"></i>
+          <span>Continue with Apple</span>
+        </button>
+        <button type="button" class="btn-social phone-btn" onclick="showToast('SMS Verification Sent', 'info')">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Sign In with Phone OTP</span>
+        </button>
       </div>
 
-      <div style="text-align: center; margin-top: 16px;">
-        <a href="index.html" style="font-size: 0.82rem; color: var(--text-muted);"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+      <div style="text-align: center; margin-top: 24px; font-size: 0.88rem; color: var(--text-muted);">
+        Don't have an account? <a href="register.html" style="color: var(--burgundy-primary); font-weight: 700;">Create Account</a>
       </div>
     </div>
   </div>

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
@@ -86,6 +86,19 @@
           <i class="fas fa-user-plus"></i> Create Account
         </button>
       </form>
+
+      <div class="auth-divider"><span>Or register with</span></div>
+
+      <div class="social-login-grid">
+        <button type="button" class="btn-social google-btn" onclick="showToast('Google Account Connected', 'info')">
+          <i class="fab fa-google"></i>
+          <span>Sign up with Google</span>
+        </button>
+        <button type="button" class="btn-social apple-btn" onclick="showToast('Apple ID Connected', 'info')">
+          <i class="fab fa-apple"></i>
+          <span>Sign up with Apple</span>
+        </button>
+      </div>
 
       <div style="text-align: center; margin-top: 24px; font-size: 0.88rem; color: var(--text-muted);">
         Already have an account? <a href="login.html" style="color: var(--burgundy-primary); font-weight: 700;">Login here</a>
